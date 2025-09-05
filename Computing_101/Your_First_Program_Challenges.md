@@ -1,9 +1,9 @@
-###Your First Register
+### Your First Register
 
-###Your First Syscall
+### Your First Syscall
 
-###Exit Codes
+### Exit Codes
 
-###Building Executables
+### Building Executables
 
-###Moving Between Registers
+### Moving Between Registers
