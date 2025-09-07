@@ -1,7 +1,7 @@
 # Hello Hackers
 This module will teach you the VERY basics of interacting with the command line! The command line lets you execute commands. When you launch a terminal, it will execute a command line "shell", which will look like this:
 
-'hacker@dojo:~$'
+`hacker@dojo:~$`
 This is called the "prompt", and it's prompting you to enter a command. Let's take a look at what's going on here:
 
 The hacker in the prompt is the username of the current user. In the pwn.college DOJO environment, this is "hacker".
