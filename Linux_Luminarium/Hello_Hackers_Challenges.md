@@ -24,7 +24,8 @@ Move on to the first challenge to learn how to actually execute commands!</p>
 
 ---
 
-### Intro to Commands
+## Intro to Commands
+
 In this challenge, you will learn to use the `whoami` command in the terminal.  
 
 - `whoami`: displays the current username.  
@@ -42,6 +43,6 @@ Simply type **`hello`** into the terminal and run it:
 
 ---
 
-### Intro to Arguments
+## Intro to Arguments
 
-### Command History
+## Command History
