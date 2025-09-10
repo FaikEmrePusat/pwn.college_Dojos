@@ -22,9 +22,25 @@ Move on to the first challenge to learn how to actually execute commands!</p>
 
 </div>
 
-
+---
 
 ### Intro to Commands
+In this challenge, you will learn to use the `whoami` command in the terminal.  
+
+- `whoami`: displays the current username.  
+- **Case-sensitive** — `whoami` is correct, but `Whoami` is not.  
+
+When typed correctly, the command runs and the shell will show the prompt again.
+
+
+### How to Capture the Flag
+
+Simply type **`hello`** into the terminal and run it:
+
+- `hello` → works and gives the flag.  
+- `Hello`, `HELLO`, etc. → invalid.
+
+---
 
 ### Intro to Arguments
 
