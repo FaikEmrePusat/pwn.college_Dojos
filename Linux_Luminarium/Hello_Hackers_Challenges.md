@@ -45,4 +45,19 @@ Simply type **`hello`** into the terminal and run it:
 
 ## Intro to Arguments
 
+In this challenge, commands are structured with the **first word** being the **command** and the **subsequent words** being its **arguments**.
+
+For example, when you type `echo Hello` in the terminal:
+*   `echo` is the **command**.
+*   `Hello` is the **argument**.
+
+The `echo` command simply prints its arguments as output.
+
+To retrieve the flag, you must use the `hello` command with a single argument: `hackers`.
+
+**The correct command to execute is:**
+```
+hello hackers
+```
+
 ## Command History
