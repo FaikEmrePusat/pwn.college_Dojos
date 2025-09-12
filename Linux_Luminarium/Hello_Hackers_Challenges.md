@@ -60,6 +60,8 @@ To retrieve the flag, you must use the `hello` command with a single argument: `
 hello hackers
 ```
 
+---
+
 ## Command History
 
 When working in the terminal, typing every command from scratch can become tedious. To help with this, the shell saves a history of every command you execute.
