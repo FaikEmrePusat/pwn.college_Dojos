@@ -61,3 +61,13 @@ hello hackers
 ```
 
 ## Command History
+
+When working in the terminal, typing every command from scratch can become tedious. To help with this, the shell saves a history of every command you execute.
+
+You can navigate through this list of previously run commands by using the **Up Arrow (↑)** and **Down Arrow (↓)** keys.
+
+In this challenge, the flag was saved into this history. Press the **Up Arrow Key** to scroll through your past commands until you find it.
+
+This is also a fundamental skill for efficient terminal use, allowing you to quickly recall and re-run commands without retyping them.
+
+
