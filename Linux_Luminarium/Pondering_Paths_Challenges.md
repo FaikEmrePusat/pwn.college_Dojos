@@ -46,10 +46,75 @@ The challenge program (`run`) is located in the `/challenge` directory. To execu
 ---
 
 ## Position thy self
+### Challenge Description
+Execute the `/challenge/run` program from a specified directory using the `cd` command to change your current working directory first.
+
+### Concepts Learned
+- **Current Working Directory**: Each process (including your shell) operates within a specific directory context
+- **cd Command**: Changes the shell's current working directory when given a path argument
+- **Path Navigation**: Using absolute or relative paths to move through the filesystem
+
+### Steps to Get the Flag
+1. The challenge will specify a target directory to navigate to
+2. Use the cd command with the provided path:
+   ```bash
+   cd /specified/directory
+   ```
+3. Verify your location (notice how the prompt changes to show current path)
+4. Execute the challenge program using its absolute path:
+   ```bash
+   /challenge/run
+   ```
+5. The program will output the flag when run from the correct directory
+
+---
 
 ## Position elsewhere
+### Concepts Learned
+Execute `/challenge/run` from a specified directory using the `cd` command.
+
+### Concepts Learned
+- **cd command**: Changes current working directory
+- **Working directory**: Each process operates within a specific directory context
+- **Path navigation**: Moving through filesystem hierarchy
+
+### Steps to Get the Flag
+1. Navigate to the specified directory:
+   ```bash
+   cd /target/directory
+   ```
+2. Verify location (prompt shows current path)
+3. Execute the program:
+   ```bash
+   /challenge/run
+   ```
+4. Program outputs flag when run from correct directory
+
+---
 
 ## Position yet elsewhere
+### Concepts Learned
+Run `/challenge/run` from a specified directory using `cd` to change your working directory.
+
+### Concepts Learned
+- **`cd` command**: Changes current directory
+- **Working directory**: Processes operate within a directory context
+- **Path navigation**: Moving through filesystem hierarchy
+
+### Steps to Get the Flag 
+1. Change to specified directory:
+   ```bash
+   cd /given/path
+   ```
+2. Confirm location (prompt shows current path)
+3. Execute program:
+   ```bash
+   /challenge/run
+   ```
+
+*Note: The `~` in your prompt represents your home directory and changes as you navigate.*
+
+---
 
 ## implicit relative paths, from /
 
