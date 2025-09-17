@@ -70,7 +70,7 @@ Execute the `/challenge/run` program from a specified directory using the `cd` c
 ---
 
 ## Position elsewhere
-### Concepts Learned
+### Challenge Description
 Execute `/challenge/run` from a specified directory using the `cd` command.
 
 ### Concepts Learned
@@ -93,7 +93,7 @@ Execute `/challenge/run` from a specified directory using the `cd` command.
 ---
 
 ## Position yet elsewhere
-### Concepts Learned
+### Challenge Description
 Run `/challenge/run` from a specified directory using `cd` to change your working directory.
 
 ### Concepts Learned
@@ -117,9 +117,79 @@ Run `/challenge/run` from a specified directory using `cd` to change your workin
 ---
 
 ## implicit relative paths, from /
+To complete this challenge, you need to execute the `/challenge/run` program from the root directory (`/`) using a relative path. The relative path from the root directory is `challenge/run`, which starts with the letter 'c' as hinted.
+
+### Steps to Get the Flag 
+1. Change your current working directory to the root directory:
+   ```bash
+   cd /
+   ```
+2. Verify that you are in the root directory by checking the prompt (it should show something like `hacker@dojo:/$`).
+3. Execute the program using the relative path:
+   ```bash
+   challenge/run
+   ```
+4. The program will run and output the flag.
+
+This demonstrates the use of relative paths, where the path is interpreted based on the current working directory. Since you are in the root directory, the relative path `challenge/run` resolves to the absolute path `/challenge/run`.
+
+---
 
 ## explicit relative paths, from /
+To complete this challenge, you need to execute the `/challenge/run` program using a relative path that includes the dot (.) to represent the current directory. The most straightforward way is to change to the `/challenge` directory and then run the program with `./run`.
+
+### Steps to Get the Flag 
+1. Change your current working directory to `/challenge`:
+   ```bash
+   cd /challenge
+   ```
+2. Execute the program using the relative path with dot:
+   ```bash
+   ./run
+   ```
+3. The program will run and output the flag.
+
+This demonstrates the use of the dot (.) in relative paths, where `./run` refers to the `run` program in the current directory (`/challenge`).
+
+---
 
 ## implicit relative path
+To complete this challenge, you need to execute the `run` program located in the `/challenge` directory by explicitly using a relative path that includes the current directory (`.`). This is necessary because Linux does not automatically search the current directory for executables when you enter a "naked" command like `run`.
+
+### Steps to Get the Flag 
+1. Change your current working directory to `/challenge`:
+   ```bash
+   cd /challenge
+   ```
+2. Execute the program using the relative path with `./`:
+   ```bash
+   ./run
+   ```
+3. The program will run and output the flag.
+
+This demonstrates the importance of explicitly specifying the current directory in paths to avoid command not found errors and ensures you understand how relative paths work with `.`.
+
+---
 
 ## home sweet home
+### Challenge Description
+Execute `/challenge/run` with an argument that is an absolute path to a file in your home directory, using tilde (`~`) expansion to meet the length constraint (3 characters or less before expansion).
+
+### Concepts Learned  
+- **Tilde Expansion**: The `~` character expands to your home directory (e.g., `~` becomes `/home/hacker`).
+- **Absolute Path Requirement**: The path must start from root and reside within your home directory.
+- **Argument Length Constraint**: The argument must be 3 characters or less before expansion.
+
+### Steps to Get the Flag
+1. Run the following command to write the flag to a file in your home directory:
+   ```bash
+   /challenge/run ~/f
+   ```
+   This uses `~/f` (3 characters before expansion), which expands to `/home/hacker/f`.
+
+2. View the flag by reading the file:
+   ```bash
+   cat ~/f
+   ```
+
+This demonstrates tilde expansion and absolute path usage within the home directory.
