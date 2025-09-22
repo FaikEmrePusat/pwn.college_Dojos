@@ -43,11 +43,45 @@ In pwn.college, the flag is always located at `/flag`, though it is not always d
 ---
 
 ## more catting practice
+### Challenge Description
+Read the flag using `cat` with its absolute path without changing directories.
 
+### Concepts Learned 
+- **Absolute Path**: Directly specify the full path to the file from root (`/`).  
+- **Restriction**: The `cd` command is not allowed; you must use the full path directly.  
+
+### Steps to Get the Flag
+1. Use `cat` with the absolute path provided for the flag (e.g., `/unusual/directory/structure/flag`):  
+   ```bash
+   cat /absolute/path/to/flag
+   ```  
+2. The flag will be displayed directly in the terminal.  
+
+**Note**  
+The exact path will be unique to this challenge—replace `/absolute/path/to/flag` with the actual path given in the challenge description.
+
+---
 
 ## grepping for a needle in a haystack
+### Challenge Description
+Use `grep` to search for the flag in the large file `/challenge/data.txt` by matching the flag's starting text.
+
+### Concepts Learned 
+- **`grep` command**: Searches for specific strings within files and outputs matching lines.  
+- **Flag Identifier**: The flag always starts with `pwn.college`.  
+
+### Steps to Get the Flag
+1. Run the following command to search for the flag:  
+   ```bash
+   grep "pwn.college" /challenge/data.txt
+   ```  
+2. The line containing the flag will be displayed in the terminal.
+
+---
 
 ## comparing files
+
+
 
 ## listing files
 
