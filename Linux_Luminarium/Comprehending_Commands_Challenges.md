@@ -155,8 +155,45 @@ This demonstrates basic file creation with `touch` using absolute paths.
 ---
 
 ## removing files
+### Challenge Description
+Delete the `delete_me` file from your home directory using `rm`, then run `/challenge/check` to verify and get the flag.
+
+### Concepts Learned 
+- **`rm` command**: Removes files permanently  
+- **File deletion**: Practice cleaning up unwanted files  
+
+### Steps to Get the Flag  
+1. Delete the file from your home directory:  
+   ```bash
+   rm ~/delete_me
+   ```  
+2. Run the verification program:  
+   ```bash
+   /challenge/check
+   ```  
+3. The program will confirm deletion and output the flag
+
+---
 
 ## moving files
+### Challenge Description
+Move the `/flag` file to `/tmp/hack-the-planet` using the `mv` command, then run `/challenge/check` to verify and receive the flag.
+
+### Concepts Learned
+- **`mv` command**: Moves or renames files and directories by specifying source and destination paths.  
+- **Absolute paths**: Using full paths to ensure accurate file movement.  
+
+### Steps to Get the Flag
+1. Move the flag file to the specified location:  
+   ```bash
+   mv /flag /tmp/hack-the-planet
+   ```  
+2. Execute the check program to verify the move and obtain the flag:  
+   ```bash
+   /challenge/check
+   ```
+
+---
 
 ## hidden files
 
