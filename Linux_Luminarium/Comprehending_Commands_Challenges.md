@@ -196,13 +196,144 @@ Move the `/flag` file to `/tmp/hack-the-planet` using the `mv` command, then run
 ---
 
 ## hidden files
+### Challenge Description
+Find and read the hidden flag file in the root directory (/) that starts with a dot.
+
+### Concepts Learned
+- **Hidden files**: Files starting with a dot (.) are hidden by default in `ls`.  
+- **`ls -a`**: The `-a` flag lists all files, including hidden ones.  
+
+### Steps to Get the Flag
+1. List all files in the root directory, including hidden ones:  
+   ```bash
+   ls -a /
+   ```  
+2. Identify the hidden file (e.g., `.flag` or similar).  
+3. Read the file using `cat`:  
+   ```bash
+   cat //.flag
+   ```  
+   Replace `.flag` with the actual filename from the `ls` output.  
+
+This will display the flag.
+
+---
 
 ## An Epic Filesystem Quest
+### Challenge Description
+Find the hidden flag by following clues starting from the root directory using `ls` and `cat`.
+
+### Concepts Learned
+- **Navigation**: Use `cd` to change directories.  
+- **Listing files**: Use `ls` to explore directory contents.  
+- **Reading files**: Use `cat` to read clue files.  
+
+### Steps to Get the Flag
+1. Start at the root directory:  
+   ```bash
+   cd /
+   ```  
+2. List the files to find a clue file (e.g., `HINT`, `CLUE`, or similar):  
+   ```bash
+   ls
+   ```  
+3. Read the clue file to get the next direction:  
+   ```bash
+   cat CLUE
+   ```  
+   (Replace `CLUE` with the actual filename found.)  
+4. Follow the clue to the next directory or file. For example, if the clue says "Go to /home/hacker", then:  
+   ```bash
+   cd /home/hacker
+   ```  
+5. Repeat steps 2-4 in the new directory until you find the flag file.  
+6. Once you find the flag, read it with `cat`:  
+   ```bash
+   cat flag_file
+   ```  
+
+This process requires iterative exploration. The clues will guide you through the filesystem until you locate the flag.
+Good luck!
+
+---
 
 ## making directories
+### Challenge Description
+Create a directory named `pwn` in `/tmp` and a file named `college` inside it, then run `/challenge/run` to get the flag.
+
+### Concepts Learned
+- **`mkdir` command**: Creates new directories.  
+- **`touch` command**: Creates new, empty files.  
+- **Absolute paths**: Use full paths to ensure accuracy.  
+
+### Steps to Get the Flag
+1. Create the directory `/tmp/pwn`:  
+   ```bash
+   mkdir /tmp/pwn
+   ```  
+2. Create the file `college` inside the directory:  
+   ```bash
+   touch /tmp/pwn/college
+   ```  
+3. Run the challenge program to verify and receive the flag:  
+   ```bash
+   /challenge/run
+   ```  
+
+This demonstrates directory creation and file management using absolute paths.
+
+---
 
 ## finding files
+### Challenge Description
+Find the hidden flag file named "flag" somewhere in the filesystem using the `find` command.
 
-## Symbolic Links
+### Concepts Learned
+- **`find` command**: Searches for files and directories based on criteria like name.  
+- **Permission errors**: Some directories are inaccessible; errors can be suppressed.  
+- **Multiple files**: There may be multiple "flag" files; check each one for the actual flag.
+
+### Steps to Get the Flag
+1. Search for all files named "flag" from the root directory, ignoring errors:  
+   ```bash
+   find / -name flag 2>/dev/null
+   ```  
+   This lists accessible paths.  
+2. Check each found file with `cat` to find the flag:  
+   ```bash
+   cat /path/to/flag
+   ```  
+   Replace `/path/to/flag` with each path from the list.  
+3. Alternatively, use `grep` to search for the flag pattern (e.g., "pwn.college") directly:  
+   ```bash
+   find / -name flag 2>/dev/null -exec grep "pwn.college" {} \;
+   ```  
+   This outputs matching lines, revealing the flag quickly.
+
+This demonstrates file searching with `find` and content inspection with `cat` or `grep`.
+
+---
 
 ## linking files
+### Challenge Description
+Use a symbolic link to trick `/challenge/catflag` into reading the flag from `/flag` instead of `/home/hacker/not-the-flag`.
+
+### Concepts Learned
+- **Symbolic links (symlinks)**: Create pointers to files using `ln -s`.  
+- **File redirection**: By replacing `/home/hacker/not-the-flag` with a symlink to `/flag`, accessing the symlink will redirect to the actual flag.  
+
+### Steps to Get the Flag
+1. Remove the existing `/home/hacker/not-the-flag` file (if it exists):  
+   ```bash
+   rm /home/hacker/not-the-flag
+   ```  
+2. Create a symbolic link from `/home/hacker/not-the-flag` to `/flag`:  
+   ```bash
+   ln -s /flag /home/hacker/not-the-flag
+   ```  
+3. Run the challenge program to retrieve the flag:  
+   ```bash
+   /challenge/catflag
+   ```  
+
+This will cause `/challenge/catflag` to read the symlink, which points to `/flag`, thus displaying the flag.
