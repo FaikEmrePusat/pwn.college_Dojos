@@ -88,18 +88,178 @@ This demonstrates how bracket globbing can efficiently match multiple files with
 ---
 
 ## Matching paths with []
+### Challenge Description
+Run `/challenge/run` from your home directory with a single glob pattern argument that expands to the absolute paths of `file_a`, `file_b`, `file_s`, and `file_h` in `/challenge/files`.
 
+### Concepts Learned
+- **Bracket Globbing**: Using `[absh]` to match any one of the characters 'a', 'b', 's', or 'h' in the filename.  
+- **Absolute Paths**: The glob pattern must include the full path from root (`/`).  
+- **Shell Expansion**: The shell expands the glob pattern into multiple arguments before passing them to the program.  
+
+### Steps to Get the Flag  
+1. From your home directory (`/home/hacker`), run the following command:  
+   ```bash
+   /challenge/run /challenge/files/file_[absh]
+   ```  
+   This pattern expands to the absolute paths `/challenge/files/file_a`, `/challenge/files/file_b`, `/challenge/files/file_s`, and `/challenge/files/file_h`.  
+2. The program will process these files and output the flag.  
+
+This demonstrates how bracket globbing can be used with absolute paths to match multiple files efficiently.
 
 ---
 
 ## Multiple globs
+### Challenge Description 
+Change to the `/challenge/files` directory and run `/challenge/run` with a single glob pattern argument that matches all files containing the letter 'p'. The pattern must be three characters or less and contain two `*` wildcards.
+
+### Concepts Learned
+- **Globbing with Multiple Wildcards**: Using `*` to match any sequence of characters, and combining them with literal characters to form patterns.  
+- **Pattern Efficiency**: The pattern `*p*` matches any filename that contains the letter 'p' anywhere in the name.  
+- **Shell Expansion**: The shell expands the glob pattern into multiple filenames before passing them to the program.  
+
+### Steps to Get the Flag  
+1. Change to the `/challenge/files` directory:  
+   ```bash
+   cd /challenge/files
+   ```  
+2. Run `/challenge/run` with the glob pattern `*p*`:  
+   ```bash
+   /challenge/run *p*
+   ```  
+   This pattern is three characters long and expands to all files in the current directory that contain the letter 'p'.  
+3. The program will process the matched files and output the flag.  
+
+This demonstrates how to use multiple wildcards in a single glob pattern to match files based on content within their names.
+
+---
 
 ## Mixing globs
+### Challenge Description
+Change to the `/challenge/files` directory and run `/challenge/run` with a single glob pattern argument that matches the files "challenging", "educational", and "pwning". The pattern must be six characters or less.
+
+### Concepts Learned
+- **Globbing with Multiple Wildcards**: Using `*` to match any sequence of characters, combined with literal characters to form a pattern that matches specific files.  
+- **Pattern Efficiency**: The pattern `*i*n*` matches any filename that contains the letter 'i' followed by the letter 'n' anywhere in the name, which applies to all three target files.  
+- **Shell Expansion**: The shell expands the glob pattern into multiple filenames before passing them to the program.  
+
+### Steps to Get the Flag  
+1. Change to the `/challenge/files` directory:  
+   ```bash
+   cd /challenge/files
+   ```  
+2. Run `/challenge/run` with the glob pattern `*i*n*`:  
+   ```bash
+   /challenge/run *i*n*
+   ```  
+   This pattern is four characters long and expands to include "challenging", "educational", and "pwning" (assuming no other files in the directory contain 'i' followed by 'n').  
+3. The program will process the matched files and output the flag.  
+
+This demonstrates how to use a concise glob pattern with multiple wildcards to match multiple files based on common character sequences.
+
+---
 
 ## Exclusionary globbing
+### Challenge Description
+Change to the `/challenge/files` directory and run `/challenge/run` with a single glob pattern argument that matches all files NOT starting with the letters 'p', 'w', or 'n'.
+
+### Concepts Learned  
+- **Negative Bracket Globbing**: Using `[^...]` or `[!...]` to match characters NOT in the specified set.  
+- **Pattern Structure**: The pattern should exclude files starting with 'p', 'w', or 'n'.  
+- **Shell Expansion**: The shell expands the negative glob pattern to include all files that don't match the excluded characters.  
+
+### Steps to Get the Flag  
+1. Change to the `/challenge/files` directory:  
+   ```bash
+   cd /challenge/files
+   ```  
+2. Run `/challenge/run` with the negative glob pattern `[^pwn]*`:  
+   ```bash
+   /challenge/run [^pwn]*
+   ```  
+   This pattern matches all files that do NOT start with 'p', 'w', or 'n'.  
+3. The program will process the matched files and output the flag.  
+
+**Note**  
+- `[^pwn]` matches any single character except 'p', 'w', or 'n'  
+- The `*` wildcard then matches the rest of the filename  
+- This pattern effectively excludes files starting with the specified letters while including all others
+
+---
 
 ## Tab completion
+### Challenge Description
+Use tab completion to read the `/challenge/pwncollege` file, as manual typing of the full filename is prevented.
+
+### Concepts Learned  
+- **Tab Completion**: Pressing the Tab key in the shell automatically completes partially typed commands or filenames.  
+- **Filename Trickery**: The challenge prevents manual typing of the full filename, requiring tab completion.  
+
+### Steps to Get the Flag  
+1. Start typing the command to read the file:  
+   ```bash
+   cat /challenge/pwn
+   ```  
+2. Press the **Tab** key to auto-complete the filename to `pwncollege`.  
+3. The command will become:  
+   ```bash
+   cat /challenge/pwncollege
+   ```  
+4. Press **Enter** to execute the command and display the flag.  
+
+**Note**  
+- Tab completion helps avoid typing errors and is essential when exact filenames are difficult to type manually.  
+- The shell will only auto-complete if the partial filename is unique in the directory.
+
+---
 
 ## Multiple options for tab completion
+### Challenge Description
+Use tab completion to navigate and read the correct file in `/challenge/files` that starts with `pwncollege` and contains the flag.
+
+### Concepts Learned  
+- **Tab Completion**: Pressing the Tab key in the shell automatically completes partially typed commands or filenames. If there are multiple matches, pressing Tab twice displays all options, allowing you to cycle through or refine your input.  
+- **Multiple Files**: The directory contains several files starting with `pwncollege`, so tab completion helps find the exact filename without typing it fully.  
+
+### Steps to Get the Flag  
+1. Start from your home directory and use tab completion with the full path for efficiency:  
+   ```bash
+   cat /challenge/files/p
+   ```  
+   Press **Tab** once. If multiple files start with `p`, the shell may complete to the common prefix (e.g., `pwncollege`) or show a list.  
+   - If it completes to `pwncollege`, press **Tab** again to see all files starting with `pwncollege` (e.g., `pwncollege_flag`, `pwncollege_data`, etc.).  
+   - If it doesn't complete, press **Tab** twice to view all options, then type more characters to narrow down (e.g., `pwncollege_f` and press **Tab**).  
+
+2. Once the correct filename is displayed (e.g., `/challenge/files/pwncollege_flag`), press **Enter** to execute the command and display the flag.  
+
+**Example Interaction**  
+```bash
+hacker@dojo:~$ cat /challenge/files/p
+# Press Tab once, might complete to pwncollege
+hacker@dojo:~$ cat /challenge/files/pwncollege
+# Press Tab twice to see options: pwncollege_flag  pwncollege_other
+hacker@dojo:~$ cat /challenge/files/pwncollege_flag
+# Press Enter to get the flag
+pwn.college{flag_here}
+```
+
+This demonstrates how tab completion simplifies navigating directories with multiple similar filenames, ensuring accuracy and efficiency.
+
+---
 
 ## Tab completion on commands
+### Challenge Description
+Use tab completion to run a command starting with "pwncollege" that outputs the flag.
+
+### Concepts Learned  
+- **Tab Completion for Commands**: The shell can auto-complete command names, similar to filenames, by pressing the Tab key. This helps execute commands quickly without typing the full name.  
+- **Command Execution**: After auto-completion, running the command will perform its intended action, such as outputting the flag.  
+
+### Steps to Get the Flag  
+1. In the terminal, type `pwncollege` but do not press Enter.  
+2. Press the **Tab** key to auto-complete the command. If multiple commands start with "pwncollege", press Tab twice to see options and type more characters to narrow down.  
+3. Once the command is completed (e.g., `pwncollege_command`), press **Enter** to execute it.  
+4. The command will run and output the flag.  
+
+**Note**  
+- Ensure the command is in your PATH; the pwn.college environment should be set up correctly for this.  
+- Use tab completion carefully to avoid accidentally running wrong commands.
