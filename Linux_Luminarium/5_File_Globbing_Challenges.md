@@ -1,3 +1,18 @@
+# Table of Contents
+
+- [File Globbing](#file-globbing)
+  - [Matching with *](#matching-with-)
+  - [Matching with ?](#matching-with-)
+  - [Matching with []](#matching-with-)
+  - [Matching paths with []](#matching-paths-with-)
+  - [Multiple globs](#multiple-globs)
+  - [Mixing globs](#mixing-globs)
+  - [Exclusionary globbing](#exclusionary-globbing)
+  - [Tab completion](#tab-completion)
+  - [Multiple options for tab completion](#multiple-options-for-tab-completion)
+  - [Tab completion on commands](#tab-completion-on-commands)
+  
+
 # File Globbing
 <p>Even just a few levels in, you might already be tired of typing out all these file paths.
 Luckily, the shell has a solution: globbing!
