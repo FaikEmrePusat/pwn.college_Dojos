@@ -1,3 +1,23 @@
+# Table of Contents
+
+- [Comprehending Commands](#comprehending-commands)
+  - [cat: not the pet, but the command!](#cat-not-the-pet-but-the-command)
+  - [catting absolute paths](#catting-absolute-paths)
+  - [more catting practice](#more-catting-practice)
+  - [grepping for a needle in a haystack](#grepping-for-a-needle-in-a-haystack)
+  - [comparing files](#comparing-files)
+  - [listing files](#listing-files)
+  - [touching files](#touching-files)
+  - [removing files](#removing-files)
+  - [moving files](#moving-files)
+  - [hidden files](#hidden-files)
+  - [An Epic Filesystem Quest](#an-epic-filesystem-quest)
+  - [making directories](#making-directories)
+  - [finding files](#finding-files)
+  - [linking files](#linking-files)
+
+---
+
 # Comprehending Commands
 <p>This module will expose you to some useful Linux commands that will serve you well for the rest of your journey here!
 It is FAR from an exhaustive list, and we'll continue to expand this module, but this should be enough to get you started.</p>
