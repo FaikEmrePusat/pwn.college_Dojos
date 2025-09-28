@@ -1,3 +1,11 @@
+# Table of Contents
+- [Hello Hackers](#hello-hackers)
+  - [Intro to Commands](#intro-to-commands)
+  - [Intro to Arguments](#intro-to-arguments)
+  - [Command History](#command-history)
+
+---
+
 # Hello Hackers
 <div>
 
