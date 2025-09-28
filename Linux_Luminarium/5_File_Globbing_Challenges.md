@@ -12,6 +12,7 @@
   - [Multiple options for tab completion](#multiple-options-for-tab-completion)
   - [Tab completion on commands](#tab-completion-on-commands)
   
+---
 
 # File Globbing
 <p>Even just a few levels in, you might already be tired of typing out all these file paths.
