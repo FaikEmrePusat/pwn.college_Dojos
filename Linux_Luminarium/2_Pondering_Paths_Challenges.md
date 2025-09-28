@@ -1,3 +1,18 @@
+# Table of Contents
+
+- [Pondering Paths](#pondering-paths)
+  - [The Root](#the-root)
+  - [Program and absolute paths](#program-and-absolute-paths)
+  - [Position thy self](#position-thy-self)
+  - [Position elsewhere](#position-elsewhere)
+  - [Position yet elsewhere](#position-yet-elsewhere)
+  - [implicit relative paths, from /](#implicit-relative-paths-from-)
+  - [explicit relative paths, from /](#explicit-relative-paths-from-)
+  - [implicit relative path](#implicit-relative-path)
+  - [home sweet home](#home-sweet-home)
+
+---
+
 # Pondering Paths
 <p>This module will teach you the basics of Linux file paths!</p>
 <p>The Linux filesystem is a "tree".
