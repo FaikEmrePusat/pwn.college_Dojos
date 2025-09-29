@@ -1,3 +1,16 @@
+# Table of Contents
+
+- [Digesting Documentation](#digesting-documentation)
+  - [Learning From Documentation](#learning-from-documentation)
+  - [Learning Complex Usage](#learning-complex-usage)
+  - [Reading Manuals](#reading-manuals)
+  - [Searching Manuals](#searching-manuals)
+  - [Searching For Manuals](#searching-for-manuals)
+  - [Helpful Programs](#helpful-programs)
+  - [Help for Builtins](#help-for-builtins)
+
+---
+
 # Digesting Documentation
 <p>This module will teach you one of the most important Linux skills: looking for help on how to use programs.
 This skill will serve you quite well in your journey.
