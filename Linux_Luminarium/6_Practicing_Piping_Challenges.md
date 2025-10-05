@@ -1,3 +1,23 @@
+# Table of Contents
+
+- [Practicing Piping](#practicing-piping)
+  - [Redirecting output](#redirecting-output)
+  - [Redirecting more output](#redirecting-more-output)
+  - [Appending output](#appending-output)
+  - [Redirecting errors](#redirecting-errors)
+  - [Redirecting input](#redirecting-input)
+  - [Grepping stored results](#grepping-stored-results)
+  - [Grepping live output](#grepping-live-output)
+  - [Grepping errors](#grepping-errors)
+  - [Filtering with grep -v](#filtering-with-grep--v)
+  - [Duplicating piped data with tee](#duplicating-piped-data-with-tee)
+  - [Process substitution for input](#process-substitution-for-input)
+  - [Writing to multiple programs](#writing-to-multiple-programs)
+  - [Split-piping stderr and stdout](#split-piping-stderr-and-stdout)
+  - [Named pipes](#named-pipes)
+
+---
+
 # Practicing Piping
 <p>You may have observed that some commands output data onto your terminal when you run them.
 So far, this has printed you many flags, but like many things, the technology goes much deeper.
