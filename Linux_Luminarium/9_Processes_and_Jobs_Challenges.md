@@ -1,3 +1,20 @@
+# Table of Contents
+
+- [Processes and Jobs](#processes-and-jobs)
+  - [Listing Processes](#listing-processes)
+  - [Killing Processes](#killing-processes)
+  - [Interrupting Processes](#interrupting-processes)
+  - [Killing Misbehaving Processes](#killing-misbehaving-processes)
+  - [Suspending Processes](#suspending-processes)
+  - [Resuming Processes](#resuming-processes)
+  - [Backgrounding Processes](#backgrounding-processes)
+  - [Foregrounding Processes](#foregrounding-processes)
+  - [Starting Backgrounded Processes](#starting-backgrounded-processes)
+  - [Process Exit Codes](#process-exit-codes)
+
+
+---
+
 # Processes and Jobs
 <p>Computers execute software to get stuff done.
 In modern computing, this software is split into two categories: <em>operating system kernels</em> (about which we will learn <a href="/system-security">much later</a>) and <em>processes</em>, which we will discuss here.
