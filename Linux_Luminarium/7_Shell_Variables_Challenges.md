@@ -1,3 +1,15 @@
+# Table of Contents
+
+- [Shell Variables](#shell-variables)
+  - [Printing Variables](#printing-variables)
+  - [Setting Variables](#setting-variables)
+  - [Multi-word Variables](#multi-word-variables)
+  - [Exporting Variables](#exporting-variables)
+  - [Printing Exported Variables](#printing-exported-variables)
+  - [Storing Command Output](#storing-command-output)
+  - [Reading Input](#reading-input)
+  - [Reading Files](#reading-files)
+
 # Shell Variables
 
 <p>The Linux command line interface is actually a sophisticated programming language with which you can write actual programs!
