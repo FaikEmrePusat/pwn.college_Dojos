@@ -1,3 +1,15 @@
+# Table of Contents
+
+- [Data Manipulation](#data-manipulation)
+  - [Translating characters](#translating-characters)
+  - [Deleting characters](#deleting-characters)
+  - [Deleting newlines](#deleting-newlines)
+  - [Extracting the first lines with head](#extracting-the-first-lines-with-head)
+  - [Extracting specific sections of text](#extracting-specific-sections-of-text)
+  - [Sorting data](#sorting-data)
+ 
+---
+
 # Data Manipulation
 
 <p>You've learned to pipe data, specify input, and so on.
