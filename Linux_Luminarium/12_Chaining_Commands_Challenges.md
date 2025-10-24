@@ -7,14 +7,14 @@ By the end, you'll be on your way to writing <em>shell scripts</em>!</p>
 ---
 
 ## Chaining with Semicolons
-**Challenge Goal**  
+### Challenge Description
 Run `/challenge/pwn` and `/challenge/college` sequentially using the `;` operator to chain commands.
 
-**Key Concepts**  
+### Concepts Learned
 - **Command Chaining with `;`**: Executes multiple commands sequentially, regardless of whether previous commands succeed or fail  
 - **Sequential Execution**: Commands run one after another in the order specified  
 
-**Steps**  
+### Steps to Get the Flag
 1. **Run both commands chained with `;`**:  
    ```bash
    /challenge/pwn ; /challenge/college
@@ -30,14 +30,14 @@ Run `/challenge/pwn` and `/challenge/college` sequentially using the `;` operato
 ---
 
 ## Building on Success
-**Challenge Goal**  
+### Challenge Description
 Run `/challenge/first-success` and `/challenge/second` using the `&&` operator to execute the second command only if the first succeeds.
 
-**Key Concepts**  
+### Concepts Learned
 - **`&&` operator**: Executes the second command only if the first command exits successfully (exit code 0)  
 - **Conditional Execution**: Useful for creating command chains where subsequent commands depend on previous success  
 
-**Steps**  
+### Steps to Get the Flag
 1. **Run the commands with `&&`**:  
    ```bash
    /challenge/first-success && /challenge/second
@@ -53,15 +53,15 @@ Run `/challenge/first-success` and `/challenge/second` using the `&&` operator t
 ---
 
 ## Handling Failure
-**Challenge Goal**  
+### Challenge Description
 Run `/challenge/first-failure` and `/challenge/second` using the `||` operator to execute the second command only if the first fails.
 
-**Key Concepts**  
+### Concepts Learned
 - **`||` operator**: Executes the second command only if the first command fails (non-zero exit code)  
 - **Error Handling**: Useful for providing fallback behavior when commands fail  
 - **Conditional Execution**: Creates command chains where failure triggers alternative actions  
 
-**Steps**  
+### Steps to Get the Flag
 1. **Run the commands with `||`**:  
    ```bash
    /challenge/first-failure || /challenge/second
@@ -77,15 +77,15 @@ Run `/challenge/first-failure` and `/challenge/second` using the `||` operator t
 ---
 
 ## Your First Shell Script
-**Challenge Goal**  
+### Challenge Description
 Create a shell script named `x.sh` that runs `/challenge/pwn` and `/challenge/college` sequentially, then execute the script using `bash` to get the flag.
 
-**Key Concepts**  
+### Concepts Learned
 - **Shell Scripts**: Files containing sequences of shell commands that can be executed together  
 - **Script Execution**: Running shell scripts with `bash script_name.sh`  
 - **Command Sequencing**: Multiple commands in a script run in order when the script executes  
 
-**Steps**  
+### Steps to Get the Flag
 1. **Create the shell script `x.sh`**:  
    ```bash
    echo '/challenge/pwn' > x.sh
@@ -146,15 +146,15 @@ This method demonstrates how to chain multiple commands through a script and use
 ---
 
 ## Executable Shell Scripts
-**Challenge Goal**  
+### Challenge Description
 Create an executable shell script that runs `/challenge/solve` and execute it directly without explicitly calling `bash`.
 
-**Key Concepts**  
+### Concepts Learned
 - **Executable Scripts**: Shell scripts can be made executable and run directly  
 - **Shebang Line**: The `#!/bin/bash` line tells the system which interpreter to use  
 - **Execution Methods**: Direct execution vs. explicit interpreter invocation  
 
-**Steps**  
+### Steps to Get the Flag
 1. **Create the shell script** (e.g., `solve.sh`) with a shebang line:  
    ```bash
    echo '#!/bin/bash' > solve.sh
@@ -181,15 +181,15 @@ Create an executable shell script that runs `/challenge/solve` and execute it di
 ---
 
 ## Understanding Shebangs
-**Challenge Goal**  
+### Challenge Description
 Create an executable shell script at `/home/hacker/solve.sh` with a proper shebang line that outputs "hack the planet", then run `/challenge/run` to verify it works.
 
-**Key Concepts**  
+### Concepts Learned
 - **Shebang Line**: `#!/bin/bash` must be the first line of executable scripts  
 - **Script Location**: Placing the script in `/home/hacker/solve.sh`  
 - **Executable Permissions**: Scripts must have execute permissions to run directly  
 
-**Steps**  
+### Steps to Get the Flag
 1. **Create the script with proper shebang**:  
    ```bash
    echo '#!/bin/bash' > /home/hacker/solve.sh
@@ -221,15 +221,15 @@ Create an executable shell script at `/home/hacker/solve.sh` with a proper sheba
 ---
 
 ## Scripting with Arguments
-**Challenge Goal**  
+### Challenge Description
 Create a script at `/home/hacker/solve.sh` that takes two arguments and outputs them in reverse order, then run `/challenge/run` to get the flag.
 
-**Key Concepts**  
+### Concepts Learned
 - **Script Arguments**: Access command-line arguments using `$1`, `$2`, etc.  
 - **Argument Reversal**: Output arguments in reverse order  
 - **Script Execution**: Run scripts with arguments to test functionality  
 
-**Steps**  
+### Steps to Get the Flag
 1. **Create the script with proper shebang and logic**:  
    ```bash
    echo '#!/bin/bash' > /home/hacker/solve.sh
@@ -261,15 +261,15 @@ Create a script at `/home/hacker/solve.sh` that takes two arguments and outputs 
 ---
 
 ## Scripting with Conditionals
-**Challenge Goal**  
+### Challenge Description
 Create a script at `/home/hacker/solve.sh` that takes one argument and outputs "college" only if the argument is "pwn", then run `/challenge/run` to get the flag.
 
-**Key Concepts**  
+### Concepts Learned
 - **Conditional Logic**: Using `if` statements in bash scripts  
 - **String Comparison**: Using `==` operator within `[ ]` for string equality checks  
 - **Argument Handling**: Accessing script arguments with `$1`
 
-**Steps**  
+### Steps to Get the Flag
 1. **Create the script with conditional logic**:  
    ```bash
    cat > /home/hacker/solve.sh << 'EOF'
@@ -307,15 +307,15 @@ Create a script at `/home/hacker/solve.sh` that takes one argument and outputs "
 ---
 
 ## Scripting with Default Cases
-**Challenge Goal**  
+### Challenge Description
 Create a script at `/home/hacker/solve.sh` that takes one argument and outputs "college" if the argument is "pwn", otherwise outputs "nope". Then run `/challenge/run` to get the flag.
 
-**Key Concepts**  
+### Concepts Learned
 - **If-Else Logic**: Using `else` clause to handle cases where the condition is false  
 - **String Comparison**: Checking argument value with `[ "$1" == "pwn" ]`  
 - **Conditional Output**: Different outputs based on the input argument  
 
-**Steps**  
+### Steps to Get the Flag
 1. **Create the script with if-else logic**:  
    ```bash
    cat > /home/hacker/solve.sh << 'EOF'
@@ -356,15 +356,15 @@ Create a script at `/home/hacker/solve.sh` that takes one argument and outputs "
 ---
 
 ## Scripting with Multiple Conditions
-**Challenge Goal**  
+### Challenge Description
 Create a script at `/home/hacker/solve.sh` that uses multiple `elif` conditions to handle different input arguments with specific outputs, then run `/challenge/run` to get the flag.
 
-**Key Concepts**  
+### Concepts Learned
 - **Multiple Conditions**: Using `elif` to check multiple conditions in sequence  
 - **String Comparison**: Checking argument values with `[ "$1" == "value" ]`  
 - **Conditional Logic Flow**: Only one branch executes (the first matching condition)  
 
-**Steps**  
+### Steps to Get the Flag
 1. **Create the script with multiple conditions**:  
    ```bash
    cat > /home/hacker/solve.sh << 'EOF'
