@@ -7,14 +7,14 @@ Enter the world of terminal multiplexing!</p>
 ---
 
 ## Launching Screen
-**Challenge Goal**  
+### Challenge Description
 Launch the `screen` program to create a virtual terminal session and receive the flag.
 
-**Key Concepts**  
+### Concepts Learned
 - **Screen Utility**: Creates multiple virtual terminal sessions within a single terminal window  
 - **Session Management**: Allows running persistent processes independent of the main terminal  
 
-**Steps**  
+### Steps to Get the Flag
 1. **Launch screen**:  
    ```bash
    screen
@@ -32,15 +32,15 @@ Launch the `screen` program to create a virtual terminal session and receive the
 ---
 
 ## Detaching and Attaching
-**Challenge Goal**  
+### Challenge Description
 Detach from a screen session, run `/challenge/run`, then reattach to see the flag.
 
-**Key Concepts**  
+### Concepts Learned
 - **Detaching Screen**: Press Ctrl-A then d to detach from a screen session without stopping it.  
 - **Reattaching Screen**: Use `screen -r` to reattach to a detached session.  
 - **Background Processes**: Screen sessions run in the background even when detached.
 
-**Steps**  
+### Steps to Get the Flag
 1. **Launch screen**:  
    ```bash
    screen
